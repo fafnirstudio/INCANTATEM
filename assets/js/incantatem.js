@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getVisibleCount() {
     
-    return window.innerWidth <= 768 ? 1 : 6;
+    return window.innerWidth <= 768 ? 1 : 10;
   }
 
   function getItemWidth() {
