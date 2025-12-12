@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Incantatem</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=EB+Garamond:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-imfell {
+        font-family: "IM FELL English SC", serif;
+      }
+      .font-imfellE {
+        font-family: "IM FELL English", serif;
+      }
+
+      /* Hero heading (desktop) */
+      .heading-hero {
+        font-size: 90px;
+        line-height: 0.75;
+        letter-spacing: -0.03em;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        position: relative;
+        margin: 0;
+        background-color: #5c006e; 
+      }
+
+     
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("assets/images/background-in.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.6;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+     
+      @media (max-width: 768px) {
+    
+        body {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        
+        section {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+      
+        .heading-hero {
+          font-size: 48px !important;
+          line-height: 0.8 !important;
+        }
+
+     
+        [style*="font-size:45px"] {
+          font-size: 30px !important;
+        }
+
+        
+        [style*="font-size:32px"] {
+          font-size: 22px !important;
+        }
+
+        
+        [style*="font-size:18px"] {
+          font-size: 16px !important;
+        }
+
+     
+        [style*="font-size:16px"] {
+          font-size: 14px !important;
+        }
+
+
+        button {
+          font-size: 14px !important;
+        }
+
+     
+        .w-\[1200px\],
+        .w-\[1236px\],
+        .w-\[628px\],
+        .w-\[377px\],
+        .w-\[304px\] {
+          width: 100% !important;
+        }
+
+        .max-w-\[630px\],
+        .max-w-\[1340px\],
+        .max-w-\[1240px\] {
+          max-width: 100% !important;
+        }
+
+        
+        .grid.grid-cols-2 {
+          grid-template-columns: 1fr !important;
+        }
+
+       
+        .flex.gap-8 {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+      
+        .flex.gap-\[23px\] {
+          flex-direction: column;
+        }
+
+      
+        .flex.items-center.gap-4 {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+
+        [style*="background-image:url('assets/svg/funds-chart-bg.svg');"] {
+          width: 100% !important;
+        }
+
+       
+        .max-w-\[1340px\] {
+          width: 100% !important;
+        }
+      
+        .goal-card img.goal-card-bg {
+          display: none !important;
+        }
+
+      
+        .goal-card {
+          width: 100% !important;
+          height: auto !important;
+          border-radius: 14px;
+          background: rgba(255, 248, 217, 0.202);
+          display: flex;
+          flex-direction: column;
+        }
+
+      
+        .goal-card .goal-card-content > div:first-child h3,
+        .goal-card .goal-card-content > div:first-child p {
+          font-size: 22px !important;
+          line-height: 1 !important;
+        }
+
+        .goal-card-content {
+          padding: 14px 16px !important; 
+          gap: 10px !important; 
+        }
+
+      
+        .goal-card .goal-card-content > div:nth-child(2) {
+          width: 100% !important;
+          height: 8px !important;
+          border-radius: 10px !important;
+        }
+        .goal-card .goal-card-content > div:nth-child(2) div {
+          height: 100% !important;
+        }
+
+       
+        .goal-card-desc {
+          font-size: 14px !important;
+          line-height: 1.1 !important;
+          margin-top: 6px !important;
+        }
+
+    
+        .goal-card .goal-card-content > div:last-child p:last-child {
+          font-size: 22px !important;
+          line-height: 1 !important;
+        }
+
+       
+        .goal-card.goal-card-locked {
+          opacity: 1 !important; 
+          height: 120px !important; 
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+
+
+        .goal-card.goal-card-locked h3,
+        .goal-card.goal-card-locked p,
+        .goal-card.goal-card-locked .goal-card-desc,
+        .goal-card.goal-card-locked .goal-card-content div,
+        .goal-card.goal-card-locked .goal-card-content {
+          visibility: hidden !important;
+          opacity: 0 !important;
+        }
+
+       
+        .goal-card.goal-card-locked .goal-card-locked-label {
+          display: flex !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+
+        .goal-card.goal-card-locked .goal-card-locked-label span {
+          font-size: 55px !important;
+          opacity: 0.7 !important;
+        }
+
+      
+        .universe-card {
+          width: 100% !important;
+          height: 100px !important;
+          background-image: none !important;
+          border-radius: 12px;
+          border: 1px solid rgba(230, 153, 0, 100);
+        }
+
+       
+        .funds-card {
+          background-image: none !important;
+          border: 1px solid rgba(230, 153, 0, 100);
+          border-radius: 12px;
+          height: 170px !important;
+          padding: 12px !important;
+          display: flex;
+          align-items: center;
+          justify-content: space-between !important;
+          gap: 5px !important;
+        }
+
+        
+        .funds-card div.flex.flex-col.items-center.gap-2 div {
+          width: 40px !important; /* antes: 92px */
+          border-radius: 6px !important;
+        }
+
+      
+        .funds-card div.flex.flex-col.items-center.gap-2:nth-child(1) div {
+          height: 90px !important;
+        }
+
+        .funds-card div.flex.flex-col.items-center.gap-2:nth-child(2) div {
+          height: 60px !important;
+        }
+
+        .funds-card div.flex.flex-col.items-center.gap-2:nth-child(3) div {
+          height: 50px !important;
+        }
+
+        .funds-card div.flex.flex-col.items-center.gap-2:nth-child(4) div {
+          height: 35px !important;
+        }
+
+        .funds-card div.flex.flex-col.items-center.gap-2:nth-child(5) div {
+          height: 25px !important;
+        }
+
+
+        .funds-card span {
+          font-size: 12px !important;
+        }
+
+        #carousel-prev,
+        #carousel-next {
+          display: none !important;
+        }
+
+        .join-section {
+          padding-left: 23px !important;
+          padding-right: 23px !important;
+        }
+
+       
+        .join-input-wrapper {
+          flex-direction: column !important;
+          align-items: center;
+          gap: 14px !important;
+          width: 100%;
+        }
+
+        .join-input {
+          width: 100% !important;
+          max-width: 345px !important;
+        }
+
+        .join-button {
+          width: 100% !important;
+          max-width: 345px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="relative min-h-screen w-full text-white flex flex-col">
+      <!-- Logo -->
+      <div class="pt-10 pb-24 flex justify-center">
+        <img
+          src="assets/images/logo.png"
+          alt="Incantatem Logo"
+          class="h-[45px] w-auto object-contain select-none pointer-events-none"
+        />
+      </div>
+
+
+      <div class="flex-1 flex flex-col items-center">
+       
+        <h1
+          class="font-imfell text-[#F1E5CF] text-center px-4 heading-hero"
+        >
+          Aporta a <span class="text-[#E69900]">Incantatem</span>, un<br />
+          mundo virtual encantado
+        </h1>
+
+
+        <p
+          class="mt-10 max-w-3xl mx-auto text-center text-[#F1E5CF] font-imfell px-6"
+          style="
+            font-size: 18px;
+            line-height: 1.1;
+          "
+        >
+          Sumérgete en una leyenda nocturna, descubre secretos y formas parte de
+          una historia viva. Tu apoyo acelera el desarrollo y desbloquea
+          recompensas únicas dentro del juego.
+        </p>
+
+
+        <div
+          class="mt-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+        >
+          <button
+            class="w-[260px] h-[50px] sm:w-[280px] py-3 
+         bg-[#E69900] text-[#5C006E]
+         text-sm font-imfellE tracking-wide 
+         hover:bg-[#F1E5CF] hover:text-[#5C006E]
+         transition-colors duration-500"
+          >
+            Apoyar ahora
+          </button>
+
+          <button
+            class="w-[260px] h-[50px] sm:w-[280px] py-3 
+         text-[#F1E5CF]]
+         text-sm font-imfellE tracking-wide 
+         border border-[#E69900]
+         hover:bg-[#E69900] hover:text-[#5C006E]
+         transition-colors duration-500"
+          >
+            Premios
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-[200px]"></div>
+
+    <section class="w-full text-white flex flex-col items-center pt-20 pb-28">
+  
+      <h2
+        class="font-imfell text-center text-[#E69900]"
+        style="font-size:45px; line-height:0.90; letter-spacing:-0.02em;"
+      >
+        Experimenta la magia
+      </h2>
+
+   
+      <p
+        class="font-imfell text-center text-[#F1E5CF] mt-3"
+        style="font-size:18px;"
+      >
+        Observa el gameplay oficial revelado
+      </p>
+
+     
+      <div class="relative mt-14 w-[100%] max-w-[1200px] aspect-[16/9]">
+        <!-- VÍDEO / GIF -->
+        <img
+          src="assets/images/mapa_playa.png"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+    </section>
+
+    <div class="h-[155px]"></div>
+
+    <!-- ===========-->
+    <!-- RECAUDACIÓN -->
+    <!-- =========== -->
+    <section
+      class="w-full text-white flex flex-col items-center pt-20 pb-20"
+    >
+ 
+      <h2
+        class="font-imfell text-center text-[#E69900]"
+        style="font-size:45px; line-height:0.90;"
+      >
+        Meta de recaudación: animación de la adivina
+      </h2>
+
+
+      <p
+        class="font-imfell text-center text-[#F1E5CF] mt-4"
+        style="font-size:18px; line-height:1;"
+      >
+        Fondos destinados única y exclusivamente a las
+        animaciones, arte, interfaces y desarrollo del videojuego.
+      </p>
+
+
+      <div class="h-[100px]"></div>
+
+
+      <div class="flex flex-col items-center gap-[44px]">
+        <!-- CARD 1 -->
+        <button
+          class="goal-card relative w-[1200px] h-[256px] text-left group"
+        >
+
+          <img
+            src="assets/svg/goal-card-primary-bg.svg"
+            class="goal-card-bg absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            alt=""
+          />
+
+       
+          <div
+            class="goal-card-content relative z-10 p-[44px_68px] flex flex-col gap-6 text-[#F1E5CF]"
+          >
+       
+            <div class="flex justify-between items-start">
+              <h3
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                Adept Seeker
+              </h3>
+              <p
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                10€
+              </p>
+            </div>
+
+            
+            <div
+              class="w-full h-[10px] rounded-full border border-[#E69900]/70 overflow-hidden"
+            >
+              <div class="h-full w-[0%] bg-[#E69900]"></div>
+            </div>
+
+         
+            <div class="flex justify-between items-start">
+              <p
+                class="goal-card-desc text-[18px] leading-[1.1] max-w-[500px] font-imfell"
+              >
+                Support the project to unlock exclusive content
+                and begin your journey.
+              </p>
+              <p
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                0%
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <!-- CARD 2 -->
+        <div
+          class="goal-card goal-card-locked relative w-[1200px] h-[256px] text-left opacity-40 cursor-not-allowed"
+        >
+          <img
+            src="assets/svg/goal-card-locked-bg.svg"
+            class="goal-card-bg absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            alt=""
+          />
+
+          <div
+            class="goal-card-locked-label absolute inset-0 flex items-center justify-center pointer-events-none"
+          >
+            <span
+              class="font-imfell text-[130px] text-white/10"
+              >LOCKED</span
+            >
+          </div>
+
+          <div
+            class="goal-card-content relative z-10 p-[44px_68px] flex justify-between items-start"
+          >
+            <div>
+              <h3
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                Master Weaver
+              </h3>
+              <p
+                class="goal-card-desc text-[18px] leading-[0.9] mt-[18px] max-w-[500px] font-imfell"
+              >
+                Support the project to unlock exclusive content
+                and begin your journey.
+              </p>
+            </div>
+
+            <div class="text-right">
+              <p
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                10€
+              </p>
+              <p
+                class="font-imfell text-[32px] leading-[0.9] mt-4"
+              >
+                0%
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="goal-card goal-card-locked relative w-[1236px] h-[256px] text-left opacity-40 cursor-not-allowed"
+        >
+          <img
+            src="assets/svg/goal-card-locked-bg.svg"
+            class="goal-card-bg absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            alt=""
+          />
+
+          <div
+            class="goal-card-locked-label absolute inset-0 flex items-center justify-center pointer-events-none"
+          >
+            <span
+              class="font-imfell text-[130px] text-white/10"
+              >LOCKED</span
+            >
+          </div>
+
+          <div
+            class="goal-card-content relative z-10 p-[44px_68px] flex justify-between items-start"
+          >
+            <div>
+              <h3
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                Grand Archmage
+              </h3>
+              <p
+                class="goal-card-desc text-[18px] leading-[0.9] mt-[18px] max-w-[500px] font-imfell"
+              >
+                Support the project to unlock exclusive content
+                and begin your journey.
+              </p>
+            </div>
+
+            <div class="text-right">
+              <p
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                10€
+              </p>
+              <p
+                class="font-imfell text-[32px] leading-[0.9] mt-4"
+              >
+                0%
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div
+          class="goal-card goal-card-locked relative w-[1236px] h-[256px] text-left opacity-40 cursor-not-allowed"
+        >
+          <img
+            src="assets/svg/goal-card-locked-bg.svg"
+            class="goal-card-bg absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            alt=""
+          />
+
+          <div
+            class="goal-card-locked-label absolute inset-0 flex items-center justify-center pointer-events-none"
+          >
+            <span
+              class="font-imfell text-[130px] text-white/10"
+              >LOCKED</span
+            >
+          </div>
+
+          <div
+            class="goal-card-content relative z-10 p-[44px_68px] flex justify-between items-start"
+          >
+            <div>
+              <h3
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                Eternal Sage
+              </h3>
+              <p
+                class="goal-card-desc text-[18px] leading-[0.9] mt-[18px] max-w-[500px] font-imfell"
+              >
+                Support the project to unlock exclusive content
+                and begin your journey.
+              </p>
+            </div>
+
+            <div class="text-right">
+              <p
+                class="font-imfell text-[32px] leading-[0.9]"
+              >
+                10€
+              </p>
+              <p
+                class="font-imfell text-[32px] leading-[0.9] mt-4"
+              >
+                0%
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="h-[100px]"></div>
+
+   
+      <h2
+        class="font-imfell text-center text-[#F1E5CF]"
+        style="font-size:45px; line-height:0.90;"
+      >
+        Apoya el proyecto y obtén tu
+        <span class="text-[#E69900]">placa en el juego</span>
+      </h2>
+
+      
+      <div class="h-[100px]"></div>
+
+      <!-- CARDS (placas) -->
+      <div class="flex gap-8">
+        <!-- CARD RIGHT -->
+        <div
+          class="relative rounded-[10px] w-[377px] h-[222px] p-[30px] pt-[30px] flex flex-col gap-[25px] bg-no-repeat bg-center bg-cover"
+          style="background-image:url('assets/svg/plaque-silver-bg.svg');"
+        >
+          <div
+            class="absolute top-[-20px] right-[-20px] w-[60px] h-[40px] flex items-center justify-center"
+          >
+            <img
+              src="assets/svg/plaque-price-tag.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            />
+            <span
+              class="relative font-imfell text-[#4A0258]"
+              style="font-size:18px;"
+            >
+              2 €
+            </span>
+          </div>
+
+          <h3
+            class="font-imfell text-[#4A0258]"
+            style="font-size:32px; line-height:0.90;"
+          >
+            Placa de cobre
+          </h3>
+
+          <div
+            class="flex flex-col gap-1 font-imfell text-[#4A0258]"
+            style="font-size:18px; line-height:0.90;"
+          >
+            <p>
+              | Tu nombre grabado en una placa de cobre dentro del
+              juego.
+            </p>
+          </div>
+
+          <button
+            class="bg-[#E69900] py-2 w-full h-[50px] text-[#4A0258] font-imfellE hover:bg-[#4A0258] hover:text-[#F1E5CF]
+         transition-colors duration-500"
+          >
+            Select
+          </button>
+        </div>
+
+        <!-- CARD MIDDLE -->
+        <div
+          class="relative rounded-[10px] w-[377px] h-[340px] p-[30px] pt-[50px] flex flex-col gap-[35px] bg-no-repeat bg-center bg-cover"
+          style="background-image:url('assets/svg/plaque-gold-bg.svg');"
+        >
+          <div
+            class="absolute top-[-20px] right-[-20px] w-[60px] h-[40px] flex items-center justify-center"
+          >
+            <img
+              src="assets/svg/plaque-price-tag.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            />
+            <span
+              class="relative font-imfell text-[#4A0258] text-center"
+              style="font-size:18px;"
+            >
+              10 €
+            </span>
+          </div>
+
+          <h3
+            class="font-imfell text-[#4A0258]"
+            style="font-size:32px; line-height:0.90;"
+          >
+            Placa de oro
+          </h3>
+
+          <div
+            class="flex flex-col gap-1 font-imfell text-[#4A0258]"
+            style="font-size:18px; line-height:1.2;"
+          >
+            <p>
+              | Tu nombre será inmortalizado en una placa de oro
+              dentro del juego, honrando a los pocos que se
+              convirtieron en guardianes y constructores de este
+              mundo.
+            </p>
+          </div>
+
+          <button
+            class="bg-[#E69900] py-2 w-full h-[50px] text-[#4A0258] font-imfellE hover:bg-[#4A0258] hover:text-[#F1E5CF]
+         transition-colors duration-500"
+          >
+            Select
+          </button>
+        </div>
+
+        <!-- CARD LEFT -->
+        <div
+          class="relative rounded-[10px] w-[377px] h-[300px] p-[30px] pt-[40px] flex flex-col gap-[35px] bg-no-repeat bg-center bg-cover"
+          style="background-image:url('assets/svg/plaque-copper-bg.svg');"
+        >
+          <div
+            class="absolute top-[-20px] right-[-20px] w-[60px] h-[40px] flex items-center justify-center"
+          >
+            <img
+              src="assets/svg/plaque-price-tag.svg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+            />
+            <span
+              class="relative font-imfell text-[#4A0258]"
+              style="font-size:18px;"
+            >
+              5 €
+            </span>
+          </div>
+
+          <h3
+            class="font-imfell text-[#4A0258]"
+            style="font-size:32px; line-height:0.90;"
+          >
+            Placa de plata
+          </h3>
+
+          <div
+            class="flex flex-col gap-1 font-imfell text-[#4A0258]"
+            style="font-size:18px; line-height:1.2;"
+          >
+            <p>
+              | Tu nombre grabado en una placa de plata dentro del
+              juego, reconocida como colaborador destacado.
+            </p>
+          </div>
+
+          <button
+            class="bg-[#E69900] py-2 w-full h-[50px] text-[#4A0258] font-imfellE hover:bg-[#4A0258] hover:text-[#F1E5CF]
+         transition-colors duration-500"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+
+    
+      <div class="h-[100px]"></div>
+
+ 
+      <p
+        class="font-imfell text-center text-[#F1E5CF]"
+        style="font-size:18px; line-height:0.90;"
+      >
+        Donación personalizada. Recibirás tu placa en el juego.
+      </p>
+
+   
+      <div class="h-[30px]"></div>
+
+   
+      <div class="flex gap-[23px]">
+        <button
+          class="w-[165px] h-[50px] border border-[#E69900] px-[13px] py-[13px] flex items-center justify-center font-imfellE"
+          style="font-size:14px;"
+        >
+          € Cantidad
+        </button>
+
+        <button
+          class="w-[220px] h-[50px] bg-[#E69900] flex items-center justify-center font-imfellE hover:bg-[#F1E5CF] hover:text-[#5C006E]
+         transition-colors duration-500"
+          style="font-size:14px;"
+        >
+          Aportar
+        </button>
+      </div>
+
+    
+      <div class="h-[30px]"></div>
+
+      <p
+        class="font-imfell text-center text-[#F1E5CF] max-w-[500px]"
+        style="font-size:14px;"
+      >
+        Al aportar aceptas las
+        <u>Condiciones de la donación</u> y la
+        <u>Política de privacidad</u>.
+      </p>
+    </section>
+
+    <div class="h-[60px]"></div>
+
+    <!-- ===================-->
+    <!-- VISIÓN GENERAL  -->
+    <!-- =================== -->
+    <section class="w-full text-white flex flex-col items-center px-10 py-20">
+     
+      <div
+        class="max-w-[630px] w-full flex flex-col items-center text-left"
+      >
+        <h1
+          class="font-imfell text-center text-[#E69900]"
+          style="font-size:45px; line-height:0.90;"
+        >
+          Visión general del Proyecto
+        </h1>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-center text-[#F1E5CF] max-w-3xl"
+          style="font-size:18px; line-height:1;"
+        >
+          Bienvenido a la documentación extendida de este proyecto.
+          Acá encontrarás la visión, la narrativa del universo, el
+          propósito de la donación/apoyo, el progreso de la producción
+          y el roadmap que te guiará en este juego desde el concepto
+          hasta la salida
+        </p>
+
+        <div class="h-[100px]"></div>
+
+        <h2
+          class="font-imfell w-full text-[#E69900]"
+          style="font-size:32px; line-height:0.90;"
+        >
+          Visión del Proyecto
+        </h2>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-[#F1E5CF] w-full"
+          style="font-size:16px; line-height:1;"
+        >
+          Este juego es más que un proyecto: es una invitación a
+          explorar un mundo moldeado por fuerzas ancestrales,
+          historias olvidadas y el potencial inexplorado de su gente.
+        </p>
+
+        <div class="h-[35px]"></div>
+
+        <div class="w-full bg-[#F1E5CF]/20 p-6">
+          <div class="w-full flex items-start gap-4">
+            <img
+              src="assets/svg/overview-accent-line.svg"
+              alt="vertical line"
+              class="h-[50px] w-auto select-none pointer-events-none"
+            />
+            <blockquote
+              class="font-imfellE italic text-[#E69900] text-left pt-2"
+              style="font-size:16px; line-height:1.1; letter-spacing:0.01em;"
+            >
+              «Creamos mundos donde cada detalle importa — y donde los
+              jugadores se convierten en la fuerza que define su propia
+              historia.»
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="h-[35px]"></div>
+
+        <p
+          class="font-imfell text-[#F1E5CF] w-full"
+          style="font-size:16px; line-height:1; letter-spacing:0.01em;"
+        >
+          Nuestro objetivo es fusionar los cimientos clásicos de los
+          juegos de rol con un diseño moderno, ofreciendo una
+          experiencia rica en sistemas que recompensa la creatividad,
+          la estrategia y la exploración.
+        </p>
+
+        <div class="h-[100px]"></div>
+
+        <!-- ============================= -->
+        <!--         GAME UNIVERSE         -->
+        <!-- ============================= -->
+        <h2
+          class="font-imfell w-full text-[#E69900]"
+          style="font-size:32px; line-height:0.90;"
+        >
+          Universo del Juego
+        </h2>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-[#F1E5CF] w-full"
+          style="font-size:16px; line-height:1;"
+        >
+          Ambientado en un reino fracturado moldeado por el misterio y
+          el conflicto, este mundo existe en la intersección entre el
+          mito, la supervivencia y un poder olvidado.
+        </p>
+
+        <div class="h-[35px]"></div>
+
+        <!-- 4 CARDS -->
+        <div class="grid grid-cols-2 gap-x-[20px] gap-y-[20px]">
+          <div
+            class="universe-card relative w-[304px] h-[153px] p-[20px] flex flex-col justify-start bg-no-repeat bg-center bg-cover"
+            style="background-image:url('assets/svg/universe-card-bg.svg');"
+          >
+            <h3
+              class="font-imfell"
+              style="font-size:18px; line-height:0.90;"
+            >
+              The Voidlands
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; line-height:1.1;"
+            >
+              Once vibrant lands consumed by arcane imbalance — now a
+              warning to all who chase forbidden power.
+            </p>
+          </div>
+
+          <div
+            class="universe-card relative w-[304px] h-[153px] p-[20px] flex flex-col justify-start bg-no-repeat bg-center bg-cover"
+            style="background-image:url('assets/svg/universe-card-bg.svg');"
+          >
+            <h3
+              class="font-imfell"
+              style="font-size:18px; line-height:0.90;"
+            >
+              The Ember Citadel
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; line-height:1.1;"
+            >
+              A fortress of flame fueled by ancient rituals.
+            </p>
+          </div>
+
+          <div
+            class="universe-card relative w-[304px] h-[153px] p-[20px] flex flex-col justify-start bg-no-repeat bg-center bg-cover"
+            style="background-image:url('assets/svg/universe-card-bg.svg');"
+          >
+            <h3
+              class="font-imfell"
+              style="font-size:18px; line-height:0.90;"
+            >
+              The Sunken Isles
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; line-height:1.1;"
+            >
+              Submerged ruins hiding remnants of forgotten eras.
+            </p>
+          </div>
+
+          <div
+            class="universe-card relative w-[304px] h-[153px] p-[20px] flex flex-col justify-start bg-no-repeat bg-center bg-cover"
+            style="background-image:url('assets/svg/universe-card-bg.svg');"
+          >
+            <h3
+              class="font-imfell"
+              style="font-size:18px; line-height:0.90;"
+            >
+              The Arcane Spires
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; line-height:1.1;"
+            >
+              Floating structures stabilizing the world’s last
+              ley-lines.
+            </p>
+          </div>
+        </div>
+
+        <div class="h-[100px]"></div>
+
+        <!-- ============================= -->
+        <!--       WHY CROWDFUNDING        -->
+        <!-- ============================= -->
+        <h2
+          class="font-imfell w-full text-[#E69900]"
+          style="font-size:32px; line-height:0.90;"
+        >
+          ¿Por qué Crowdfunding?
+        </h2>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-[#F1E5CF] w-full"
+          style="font-size:16px; line-height:0.90; letter-spacing:0.01em;"
+        >
+          Creemos que los mejores juegos se construyen junto a sus
+          comunidades.
+        </p>
+
+        <div class="h-[35px]"></div>
+
+        <div class="flex flex-col gap-[18px] w-full">
+          <div class="bg-[#F1E5CF]/20 p-6">
+            <h3
+              class="font-imfell text-[#E69900]"
+              style="font-size:18px; line-height:0.90;"
+            >
+              Libertad Creativa
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; letter-spacing:0.08em; line-height:1;"
+            >
+              Nos mantenemos fieles a nuestra visión, sin
+              interferencias externas.
+            </p>
+          </div>
+
+          <div class="bg-[#F1E5CF]/20 p-6">
+            <h3
+              class="font-imfell text-[#E69900]"
+              style="font-size:18px; line-height:0.90;"
+            >
+              Opinión de la Comunidad
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; letter-spacing:0.08em; line-height:1;"
+            >
+              Los patrocinadores definen las características, las
+              mecánicas y las prioridades.
+            </p>
+          </div>
+
+          <div class="bg-[#F1E5CF]/20 p-6">
+            <h3
+              class="font-imfell text-[#E69900]"
+              style="font-size:18px; line-height:0.90;"
+            >
+              Recompensas Exclusivas
+            </h3>
+            <p
+              class="font-imfell text-[#F1E5CF] mt-2"
+              style="font-size:16px; letter-spacing:0.08em; line-height:1;"
+            >
+              Objetos, contenido de historia y ventajas disponibles
+              solo para los primeros patrocinadores.
+            </p>
+          </div>
+        </div>
+
+        <div class="h-[100px]"></div>
+
+        <!-- ============================= -->
+        <!--       FUNDING ALLOCATION      -->
+        <!-- ============================= -->
+        <h2
+          class="font-imfell w-full text-[#E69900]"
+          style="font-size:32px; line-height:0.90;"
+        >
+          Asignación de Fondos
+        </h2>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-[#F1E5CF] w-full"
+          style="font-size:16px; letter-spacing:0.01em;"
+        >
+          La transparencia es esencial. Cada contribución va
+          directamente a la producción.
+        </p>
+
+        <div class="h-[35px]"></div>
+
+        <div
+          class="funds-card relative w-[628px] h-[243px] p-[24px] flex items-end justify-center gap-4 bg-no-repeat bg-center bg-cover"
+          style="background-image:url('assets/svg/funds-chart-bg.svg');"
+        >
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:16px;"
+              >45%</span
+            >
+            <div class="w-[92px] h-[140px] bg-[#F1E5CF] rounded"></div>
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:14px;"
+              >Desarrollo</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:16px;"
+              >25%</span
+            >
+            <div class="w-[92px] h-[90px] bg-[#F1E5CF] rounded"></div>
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:14px;"
+              >Arte y Recursos</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:16px;"
+              >15%</span
+            >
+            <div class="w-[92px] h-[70px] bg-[#F1E5CF] rounded"></div>
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:14px;"
+              >Sonido</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:16px;"
+              >10%</span
+            >
+            <div class="w-[92px] h-[40px] bg-[#F1E5CF] rounded"></div>
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:14px;"
+              >Marketing</span
+            >
+          </div>
+
+          <div class="flex flex-col items-center gap-2">
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:16px;"
+              >5%</span
+            >
+            <div class="w-[92px] h-[25px] bg-[#F1E5CF] rounded"></div>
+            <span
+              class="font-imfellE text-[#F1E5CF]"
+              style="font-size:14px;"
+              >Operaciones</span
+            >
+          </div>
+        </div>
+
+        <div class="h-[100px]"></div>
+
+        <!-- ============================= -->
+        <!--         ROADMAP AHEAD         -->
+        <!-- ============================= -->
+        <h2
+          class="font-imfell text-left w-full text-[#E69900]"
+          style="font-size:32px; line-height:0.90;"
+        >
+          Hoja de Ruta
+        </h2>
+
+        <div class="h-[18px]"></div>
+
+        <p
+          class="font-imfell text-left text-[#F1E5CF] w-full"
+          style="font-size:16px;"
+        >
+          Nuestro viaje continúa. Estos son los próximos grandes
+          hitos.
+        </p>
+
+        <div class="h-[35px]"></div>
+
+        <div
+          class="relative max-w-[630px] w-full mx-auto flex items-start gap-[40px] h-[520px]"
+        >
+          <img
+            src="assets/svg/roadmap-timeline-line.svg"
+            alt="timeline line"
+            class="h-[90%] w-auto select-none pointer-events-none"
+          />
+
+          <div class="flex flex-col gap-[50px] text-left">
+            <div>
+              <span
+                class="font-imfellE text-[#F1E5CF]"
+                style="font-size:14px;"
+                >T2 2024</span
+              >
+              <h4
+                class="font-imfell mt-1 text-[#E69900]"
+                style="font-size:18px; line-height:1;"
+              >
+                Lanzamiento de Acceso Alfa
+              </h4>
+              <p
+                class="font-imfell text-[#F1E5CF] mt-2"
+                style="font-size:16px; line-height:1;"
+              >
+                Primer build jugable para los patrocinadores de Nivel
+                1. Enfoque en el combate, los sistemas centrales y la
+                estabilidad.
+              </p>
+            </div>
+
+            <div>
+              <span
+                class="font-imfellE text-[#F1E5CF]"
+                style="font-size:14px;"
+                >T3 2024</span
+              >
+              <h4
+                class="font-imfell mt-1 text-[#E69900]"
+                style="font-size:18px; line-height:1;"
+              >
+                Expansión del Mundo
+              </h4>
+              <p
+                class="font-imfell text-[#F1E5CF] mt-2"
+                style="font-size:16px; line-height:1;"
+              >
+                Incorporación de dos nuevas zonas, arcos narrativos y
+                sistemas de interacción con NPCs.
+              </p>
+            </div>
+
+            <div>
+              <span
+                class="font-imfellE text-[#F1E5CF]"
+                style="font-size:14px;"
+                >T4 2024</span
+              >
+              <h4
+                class="font-imfell mt-1 text-[#E69900]"
+                style="font-size:18px; line-height:1;"
+              >
+                Fase Beta
+              </h4>
+              <p
+                class="font-imfell text-[#F1E5CF] mt-2"
+                style="font-size:16px; line-height:1;"
+              >
+                Contenido completo. Pulido, corrección de errores,
+                balanceo y ajustes basados en la opinión de la
+                comunidad.
+              </p>
+            </div>
+
+            <div>
+              <span
+                class="font-imfellE text-[#F1E5CF]"
+                style="font-size:14px;"
+                >T1 2025</span
+              >
+              <h4
+                class="font-imfell mt-1 text-[#E69900]"
+                style="font-size:18px; line-height:1;"
+              >
+                Lanzamiento Oficial
+              </h4>
+              <p
+                class="font-imfell text-[#F1E5CF] mt-2"
+                style="font-size:16px; line-height:1;"
+              >
+                Lanzamiento completo en todas las plataformas
+                compatibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- CAROUSEL PERSONAS                        -->
+    <!-- ========================================= -->
+    <section class="w-full flex flex-col items-center text-white py-20">
+      <h2
+        class="font-imfell text-[45px] leading-[0.9] text-center text-[#E69900]"
+      >
+        Personas que han contribuido
+      </h2>
+
+      <div class="mt-[100px]"></div>
+
+      <div class="relative w-full max-w-[1340px] mx-auto overflow-hidden">
+        <div
+          id="carousel-track"
+          class="flex items-start gap-[75px] transition-transform duration-500"
+        >
+          <!-- 8 itens -->
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              Javier R.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              Sara P.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              Pedro I.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              Anónimo
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              María S.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              María S.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              María S.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div
+              class="relative w-[200px] h-[200px] flex items-center justify-center"
+            >
+              <img
+                src="assets/svg/contributor-avatar-frame.svg"
+                alt="Circle Shape"
+                class="w-full h-full object-contain pointer-events-none select-none"
+              />
+              <div
+                class="w-[40px] h-[40px] rounded-full bg-white absolute top-1/2 left-1/2 
+                      -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+              ></div>
+            </div>
+            <p
+              class="mt-[40px] text-[#F1E5CF] text-[18px] font-imfellE"
+            >
+              María S.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[35px]"></div>
+
+      <div class="flex items-center justify-center gap-5 mt-[100px]">
+        <button id="carousel-prev" class="hover:opacity-70 transition">
+          <img
+            src="assets/svg/carousel-arrow-left.svg"
+            alt="Previous"
+            class="w-[10px] h-[22] select-none pointer-events-none"
+          />
+        </button>
+
+        <img
+          src="assets/svg/carousel-divider.svg"
+          alt=""
+          class="h-[7px] w-[100px] opacity-60 select-none pointer-events-none"
+        />
+
+        <button id="carousel-next" class="hover:opacity-70 transition">
+          <img
+            src="assets/svg/carousel-arrow-right.svg"
+            alt="Next"
+            class="w-[10px] h-[22] select-none pointer-events-none"
+          />
+        </button>
+      </div>
+    </section>
+
+    <div class="h-[60px]"></div>
+
+    <!-- ========================================= -->
+    <!-- ÚNETE AL LEGADO                          -->
+    <!-- ========================================= -->
+    <section
+      class="join-section w-full text-white flex flex-col items-center pt-24 pb-24"
+    >
+      <h2
+        class="font-imfell text-center text-[#E69900]"
+        style="font-size:45px; line-height:0.90;"
+      >
+        Únete al Legado
+      </h2>
+
+      <div class="h-[18px]"></div>
+
+      <p
+        class="font-imfell text-center text-[#F1E5CF] max-w-[800px]"
+        style="font-size:18px; line-height:1;"
+      >
+        Conviértete en parte de la historia de este mundo. Apoya el
+        proyecto y asegura<br />tu lugar entre los primeros creadores
+        de este universo.
+      </p>
+
+      <div class="h-[30px]"></div>
+
+     
+      <div class="join-input-wrapper flex items-center gap-4">
+        <input
+          type="email"
+          placeholder="Introduce tu correo electrónico..."
+          class="join-input w-[440px] h-[50px] bg-transparent border border-[#E69900] px-4 font-imfellE text-white placeholder-gray-400"
+          style="font-size:14px;"
+        />
+
+        <button
+          class="join-button w-[150px] h-[50px] bg-[#E69900] text-[#F1E5CF] font-imfellE flex items-center justify-center hover:bg-[#F1E5CF] hover:text-[#5C006E]
+      transition-colors duration-500"
+          style="font-size:16px;"
+        >
+          Unirse
+        </button>
+      </div>
+
+      <div class="h-[30px]"></div>
+
+      <p
+        class="font-imfell text-center text-[#F1E5CF]"
+        style="font-size:14px;"
+      >
+        Respetamos tu privacidad. Puedes darte de baja en cualquier
+        momento.
+      </p>
+    </section>
+
+    <div class="h-[155px]"></div>
+
+    <!-- ========================================= -->
+    <!-- FOOTER                                   -->
+    <!-- ========================================= -->
+    <footer
+      class="w-full text-white flex flex-col items-center pt-20 pb-0"
+    >
+      <img
+        src="assets/svg/footer-divider-line.svg"
+        alt="footer divider"
+        class="w-full max-w-[1240px] select-none pointer-events-none"
+      />
+
+      <div class="h-[70px]"></div>
+
+      <p
+        class="font-imfell text-center text-[#F1E5CF]"
+        style="font-size:14px;"
+      >
+        © 2025 Incantatem. Todos los derechos reservados.
+      </p>
+
+      <div class="h-[25px]"></div>
+
+      <div class="flex items-center gap-[30px]">
+        <img
+          src="assets/icons/icon-whatsapp.svg"
+          alt="whatsapp"
+          class="w-[22px] h-[22px] cursor-pointer"
+        />
+        <img
+          src="assets/icons/icon-telegram.svg"
+          alt="telegram"
+          class="w-[22px] h-[22px] cursor-pointer"
+        />
+        <img
+          src="assets/icons/icon-x.svg"
+          alt="x-twitter"
+          class="w-[22px] h-[22px] cursor-pointer"
+        />
+        <img
+          src="assets/icons/icon-facebook.svg"
+          alt="facebook"
+          class="w-[22px] h-[22px] cursor-pointer"
+        />
+      </div>
+
+      <div class="h-[70px]"></div>
+    </footer>
+
+    <script src="assets/js/incantatem.js"></script>
+  </body>
+</html>
