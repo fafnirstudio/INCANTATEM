@@ -1,6 +1,3 @@
-// =============================
-// CARROSSEL COM SETAS (DESKTOP)
-// =============================
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carousel-track");
   const items = Array.from(track.children);
@@ -12,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
 
   function getVisibleCount() {
-    // Mobile: 1 visível | Desktop: 5 visíveis
-    return window.innerWidth <= 768 ? 1 : 5;
+    
+    return window.innerWidth <= 768 ? 1 : 6;
   }
 
   function getItemWidth() {
@@ -30,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateCarousel() {
-    // Garante que o índice esteja válido ao mudar o tamanho da tela
+   
     index = clampIndex(index);
 
     const visibleCount = getVisibleCount();
@@ -44,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const rel = i - index;
 
       if (visibleCount === 2) {
-        // (não usamos 2 colunas hoje, mas fica preparado)
+        
       } else {
-        // DESKTOP: mesmo comportamento anterior (5 visíveis com fade nas bordas)
+     
         if (rel < 0 || rel > visibleCount - 1) {
           item.style.opacity = "0";
           item.style.pointerEvents = "none";
@@ -76,37 +73,29 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCarousel();
 });
 
-// ======================================
-// CARROSSEL AUTO-SCROLL INFINITO (MOBILE)
-// ======================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carousel-track");
   const originalItems = Array.from(track.children);
 
-  // =============================
-  // CONFIGURAÇÕES
-  // =============================
-  const SPEED = 0.8; // velocidade do movimento
-  const DUPLICATE_TIMES = 5; // duplicar 5x
+
+  const SPEED = 0.8; 
+  const DUPLICATE_TIMES = 5; 
 
   let pos = 0;
 
-  // =============================
-  // DUPLICAÇÃO DOS ITENS (5x)
-  // =============================
+ 
   for (let i = 0; i < DUPLICATE_TIMES; i++) {
     originalItems.forEach((item) => {
       const clone = item.cloneNode(true);
-      clone.style.opacity = "0"; // evita piscar na criação
+      clone.style.opacity = "0"; 
       track.appendChild(clone);
     });
   }
 
   const allItems = Array.from(track.children);
 
-  // =============================
-  // ANIMAÇÃO INFINITA MOBILE
-  // =============================
+ 
   function animate() {
     if (window.innerWidth <= 768) {
       pos -= SPEED;
@@ -116,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const firstRect = firstItem.getBoundingClientRect();
       const trackRect = track.getBoundingClientRect();
 
-      // Quando o primeiro item sair 100% pela esquerda → reposiciona
+     
       if (firstRect.right < trackRect.left) {
         pos += firstRect.width;
         track.appendChild(allItems.shift());
@@ -129,9 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animate);
   }
 
-  // =============================
-  // FADE IN / FADE OUT
-  // =============================
+  
   function applyFade() {
     const container = track.parentElement.getBoundingClientRect();
 
@@ -144,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const maxDist = container.width / 2;
 
       let opacity = 1 - distance / maxDist;
-      opacity = Math.max(0, Math.min(1, opacity)); // clamp 0 → 1
+      opacity = Math.max(0, Math.min(1, opacity)); 
 
       item.style.opacity = opacity.toFixed(2);
     });
