@@ -119,6 +119,7 @@
           max-width: 100% !important;
         }
 
+
         
         .grid.grid-cols-2 {
           grid-template-columns: 1fr !important;
@@ -150,6 +151,20 @@
         .max-w-\[1340px\] {
           width: 100% !important;
         }
+
+
+        /* Botão € Cantidad apenas no mobile */
+  button[style*="€ Cantidad"],
+  button:has(:contains("€ Cantidad")) {
+    width: 100% !important;
+    justify-content: center !important;
+    align-self: center !important;
+  }
+
+  /* Garante que o wrapper permita centralização */
+  .flex.gap-\[23px\] {
+    align-items: center !important;
+  }
       
         .goal-card img.goal-card-bg {
           display: none !important;
@@ -200,6 +215,19 @@
           line-height: 1 !important;
         }
 
+        /* COMPLETED: mesmo comportamento do LOCKED no mobile */
+.goal-card.goal-card-completed {
+  opacity: 1 !important;
+  height: 120px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.goal-card.goal-card-completed .goal-card-completed-label span {
+  font-size: 45px !important; /* igual ao LOCKED no mobile */
+  opacity: 0.70 !important;
+}
        
         .goal-card.goal-card-locked {
           opacity: 1 !important; 
@@ -312,6 +340,16 @@
           width: 100% !important;
           max-width: 345px !important;
         }
+
+        /* Reduz espaçamentos grandes entre seções */
+  .h-\[200px\] { height: 80px !important; }
+  .h-\[155px\] { height: 70px !important; }
+  .h-\[100px\] { height: 50px !important; }
+  .h-\[70px\]  { height: 40px !important; }
+  .h-\[60px\]  { height: 40px !important; }
+  .h-\[35px\]  { height: 20px !important; }
+  .h-\[30px\]  { height: 20px !important; }
+
       }
     </style>
   </head>
@@ -436,6 +474,7 @@
       <div class="h-[100px]"></div>
 
 
+      
       <div class="flex flex-col items-center gap-[44px]">
         <!-- CARD 1 -->
         <button
