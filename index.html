@@ -54,12 +54,20 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        opacity: 0.6;
+        opacity: 1;
         pointer-events: none;
         z-index: -1;
       }
 
-     
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: #5c006e;
+        opacity: 0.75;
+        z-index: -1;
+      }
+
       @media (max-width: 768px) {
     
         body {
@@ -372,7 +380,7 @@
           class="font-imfell text-[#F1E5CF] text-center px-4 heading-hero"
         >
           Aporta a <span class="text-[#E69900]">Incantatem</span>, un<br />
-          mundo virtual encantado. test
+          mundo virtual encantado.
         </h1>
 
 
